@@ -1,8 +1,8 @@
 FROM majid7221/debian:stretch
 
 RUN set -ex \
-    && apt-key adv --no-tty --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EA8CACC073C3DB2A \
-    && echo "deb http://ppa.launchpad.net/linuxuprising/java/ubuntu bionic main" | tee /etc/apt/sources.list.d/linuxuprising-java.list \
+    && apt-key adv --no-tty --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886 \
+    && echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" | tee /etc/apt/sources.list.d/linuxuprising-java.list \
     && echo oracle-java8-installer shared/accepted-oracle-license-v1-2 select true | /usr/bin/debconf-set-selections \
     && mkdir /usr/share/man/man1 \
     && apt-get update \
